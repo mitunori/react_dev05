@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage"; //追加
 
 const firebaseApp = initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
@@ -16,3 +17,4 @@ const firebaseApp = initializeApp({
 //Firebase ver9 compliant (modular)
 export const auth = getAuth(firebaseApp);
 export const db = getFirestore(firebaseApp);
+export const storage = getStorage(firebaseApp); //追加
