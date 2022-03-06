@@ -1,6 +1,6 @@
-//Firebase ver9 compliant (modular)
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+//Firebase ver9 compliant
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage"; //追加
 
@@ -13,8 +13,8 @@ const firebaseApp = initializeApp({
   messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 });
-
-//Firebase ver9 compliant (modular)
+//Firebase ver9 compliant
+export const storage = getStorage(firebaseApp); //追加
 export const auth = getAuth(firebaseApp);
 export const db = getFirestore(firebaseApp);
-export const storage = getStorage(firebaseApp); //追加
+export const provider = new GoogleAuthProvider();

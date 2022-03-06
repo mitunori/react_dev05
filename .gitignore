@@ -24,3 +24,10 @@ yarn-error.log*
 
 # gitで保存するときに、xxxだけはネット上に送りたくない！というときに使うもの🤗
 .env
+
+# firebase
+.firebase/
+.firebaserc
+firebase.json
+
+package-lock.json
